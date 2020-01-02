@@ -1,17 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./App.css";
-import { StarterApp } from "./components/SampleView/StarterApp";
+import App from './App';
 
-function App() {
-  return (
-    <div className="App">
-      <div>
-        <StarterApp />
-      </div>
-    </div>
-  );
-}
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<App />, document.getElementById("root"));
