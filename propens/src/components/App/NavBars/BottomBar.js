@@ -1,5 +1,5 @@
 import React from "react";
-import { red, heartIcon, orange } from "../App/Images/index";
+import { red, heartIcon, orange } from "../../../Images";
 import {
   yellow,
   blue,
@@ -7,7 +7,7 @@ import {
   circleMenu,
   messageIcon,
   noteIcon
-} from "../App/Images/index";
+} from "../../../Images/index";
 
 const BottomBar = () => {
   return (
