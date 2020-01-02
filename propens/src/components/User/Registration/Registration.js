@@ -1,7 +1,12 @@
 import React from 'React';
+import {useFormInput} from '../../../hooks/FormInput';
 
 
 const Registration = () => {
+    //State
+    const [fullName, setFullName] = useFormInput("");
+    console.log(fullName);
+
     return(
         <div>
             Registration
