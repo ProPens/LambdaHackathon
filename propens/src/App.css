@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+root {
+  background-color: black;
+}
+
+.App {
+  text-align: center;
+}
+
+.backing {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  object-fit: fill;
+}
+
+.bottombar {
+  display: flex;
+  margin: 0 auto;
+  padding-top: 10px;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: fixed;
+}
+
+.bottomright {
+  margin: 0 auto;
+  margin-right: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  justify-content: flex-end;
+}
+
+.barbutton {
+  margin: auto;
+  margin: 15px;
+  width: 50px;
+  height: 50px;
+}
+
+.colorbutton {
+  margin: 15px;
+  width: 50px;
+  height: 50px;
+  box-shadow: 10px 10px 80px gainsboro;
+  border-radius: 2rem;
+}
+
+.orb {
+  margin: -40px auto;
+  width: 7rem;
+  height: 7rem;
+  position: relative;
+  box-shadow: 10px 10px 40px black;
+  border-radius: 4rem;
+}
+
+.row1 {
+  margin-top: 10%;
+}
+
+.row2 {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.row3 {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.topbar {
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: black;
+  color: whitesmoke;
+  font-family: "Kulim Park", sans-serif;
+}
