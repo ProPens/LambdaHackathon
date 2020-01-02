@@ -8,7 +8,6 @@ const App = () => {
         <>
         <TopBar />
         <Dashboard />
-
         <BottomBar />
       </>
     );
