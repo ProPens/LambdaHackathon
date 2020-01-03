@@ -5,26 +5,24 @@ import { Container, Box, TextField} from '@material-ui/core';
 export const FormContainer = styled(Container)({
     width: '80%',
     margin: '0 auto',
-    padding: '10px',
-    border: '1px solid red'
+    padding: '10px'
 });
 
 export const FormHeading = styled('h1')({
     width: '80%',
     margin: '20px auto',
     padding: '10px 0',
-    textAlign: 'center',
-    color: 'red',
-    border: '1px solid purple'
+    textAlign: 'center'
 });
 
 export const FormBox = styled(Box)({
     display: 'flex',
     width: '80%',
     margin: '20px auto',
-    border: '1px solid blue'
+    justifyContent: 'center'
 })
 
 export const Form = styled('form')({
+    width: '80%', 
     border: '1px solid green'
 })
