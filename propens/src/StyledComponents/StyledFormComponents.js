@@ -70,5 +70,8 @@ export const AccountRedirectBox = styled(Box)({
     width: '100%',
     padding: '10px 0',
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    '& a': {
+        textDecoration: 'none'
+    }
 });
