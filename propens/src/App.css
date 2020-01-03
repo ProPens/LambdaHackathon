@@ -3,10 +3,6 @@
   padding: 0;
 }
 
-root {
-  background-color: black;
-}
-
 .App {
   text-align: center;
 }
@@ -31,8 +27,7 @@ root {
   justify-content: center;
   position: fixed;
 }
-
-.bottomright {
+*/ .bottomright {
   margin: 0 auto;
   margin-right: 0;
   display: flex;
@@ -57,7 +52,6 @@ root {
 }
 
 .orb {
-  margin: -40px auto;
   width: 7rem;
   height: 7rem;
   position: relative;
