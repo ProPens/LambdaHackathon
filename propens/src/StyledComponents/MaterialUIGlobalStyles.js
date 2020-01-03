@@ -1,4 +1,5 @@
-import {makeStyles} from '@material-ui/core/styles';
+import {makeStyles, styled} from '@material-ui/core/styles';
+import {Button} from '@material-ui/core';
 
 
 export const useStyles = makeStyles({
@@ -70,3 +71,8 @@ export const formStyles = makeStyles({
         }
     }, 
 })
+
+export const SubmitBtn = styled(Button)({
+    color: 'green',
+    backgroundColor: 'blue'
+});

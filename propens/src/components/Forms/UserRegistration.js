@@ -63,7 +63,7 @@ const UserRegistration = () => {
                         <TextField type="password" name="password" value={password} autoComplete="current-password" label="Password" variant="standard" required onChange={setPassword} />
                     </div>
                     <div className="inputDiv">
-                        <Select required labelId="School Level" autoWidth="true" name="schoolLevel" value={schoolLevel} variant="standard" onChange={setSchoolLevel}>
+                        <Select required labelId="School Level" name="schoolLevel" value={schoolLevel} variant="standard" onChange={setSchoolLevel}>
                             <option>Select Grade Level</option>
                             <option value="middle school" >Middle School</option>
                             <option value="high school">High School</option>

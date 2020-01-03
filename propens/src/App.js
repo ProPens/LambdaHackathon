@@ -4,7 +4,7 @@ import TopNav from './components/Navigation/TopNav';
 import BottomNav from './components/Navigation/BottomNav';
 import Dashboard from './components/Dashboard/DashBoard';
 import UserRegistration from './components/Forms/UserRegistration';
-import UserLogin from './components/Forms/UserLogin';
+import UserLoginForm from './components/Forms/UserLogin';
 
 const App = () => {
     return (
@@ -18,7 +18,7 @@ const App = () => {
                 <UserRegistration />
             </Route>
             <Route>
-                <UserLogin />
+                <UserLoginForm />
             </Route>
         </Switch>
         <BottomNav />

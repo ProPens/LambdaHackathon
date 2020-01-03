@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import {useStyles} from '../../StyledComponents/MaterialUIGlobalStyles';
 
 const TopNav =  () =>{
@@ -8,9 +8,9 @@ const TopNav =  () =>{
      <div className={classes.topNavigation}>
       <h1>ProPens</h1>
       <div className={classes.topNavigaionLinks}>
-        <Link to="/" className={classes.topNavigationLink}>Dashboard</Link>
-        <Link to="/register" className={classes.topNavigationLink}>Register</Link>
-        <Link to="/login" className={classes.topNavigationLink}>Login</Link>
+        <NavLink to="/" className={classes.topNavigationLink}>Dashboard</NavLink>
+        <NavLink to="/register" className={classes.topNavigationLink}>Register</NavLink>
+        <NavLink to="/login" className={classes.topNavigationLink}>Login</NavLink>
       </div>
     </div>
     )
