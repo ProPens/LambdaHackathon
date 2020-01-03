@@ -19,6 +19,7 @@ export const useStyles = makeStyles({
         fontFamily: `"Kulim Park", sans-serif`,
     },
     bottomNavigation: {
+        position: 'fixed',
         display: 'flex',
         margin: '0 auto',
         paddingTop: '10px',
@@ -26,7 +27,7 @@ export const useStyles = makeStyles({
         backgroundColor: 'black',
         alignItems: 'flex-start',
         justifyContent: 'center',
-        position: 'fixed'
+    
     },
     topLinksContainer: {
         width: '50%',
@@ -48,18 +49,24 @@ export const formStyles = makeStyles({
         border: '1px solid blue',
         display: 'flex',
         flexDirection: 'row wrap',
-        justifyContent: 'center'
+        justifyContent: 'center',
         },
     registrationForm: {
         width: '100%',
-        border: '1px solid red',
-        '& input': {
-            width: '100%',
-            padding: '10px 0'
-        }
+        margin: '20px 0',
+    },
+    formLabel: {
+        color: 'red',
     },
     registrationFormInput: {
-        border: '1px solid green',
-    }
-
+        padding: '10px 0',
+    },
+    inputDiv:{
+        margin: '30px 0',
+        padding: '20px 0',
+        border: '1px solid blue',
+        '& input': {
+            padding: '5px 0',
+        }
+    }, 
 })

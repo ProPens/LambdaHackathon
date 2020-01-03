@@ -1,5 +1,6 @@
 import React from 'react';
 import {useFormInput} from '../../hooks/FormInput';
+import {Button, TextField, Select} from '@material-ui/core';
 import {formStyles} from '../../StyledComponents/MaterialUIGlobalStyles';
 import axios from 'axios';
 
@@ -44,37 +45,32 @@ const UserRegistration = () => {
     return (
         <div className={styleClass.formContainer}>
             <div className="form-container">
-                <h1>Create a New Account.</h1>
+                <h1>Create a New Account</h1>
                 <form className={styleClass.registrationForm} onSubmit={handleSubmit}>
-                    <div className="inputContainer">
-                        <label htmlFor="firstName">Full Name: </label>
-                        <input type="text" name="firstName" value={firstName} onChange={setFirstName}/>
+                    <div className="inputDiv">
+                        <TextField type="text" name="firstName" value={firstName} label="First Name" variant="standard" required onChange={setFirstName} />
                     </div>
-                    <div className="inputContainer">
-                        <label htmlFor="lastName">Last Name: </label>
-                        <input type="text" name="lastName" value={lastName} onChange={setLastName}/>
+                    <div className="inputDiv">
+                        <TextField type="text" name="lastName" value={lastName} label="Last Name" onChange={setLastName}/>
                     </div>
-                    <div className="inputContainer">
-                        <label htmlFor="userName">Username:</label>
-                        <input type="text" name="userName" value={userName} onChange={setUserName}/>
+                    <div className="inputDiv">
+                        <TextField type="text" name="userName" value={userName}  label="Username" variant="standard" required onChange={setUserName}/>
                     </div>
-                    <div className="inputContainer">
-                        <label htmlFor="">Email:</label>
-                        <input type="email" name="email" value={email} onChange={setEmail} />
+                    <div className="inputDiv">
+                        <TextField type="email" name="email" value={email}  label="Email" variant="standard" required onChange={setEmail} />
                     </div>
-                    <div className="inputContainer">
-                        <label htmlFor="">Password: </label>
-                        <input type="password" name="password" value={password} onChange={setPassword} />
+                    <div className="inputDiv">
+                        <TextField type="password" name="password" value={password} autoComplete="current-password" label="Password" variant="standard" required onChange={setPassword} />
                     </div>
-                    <div className="inputContainer">
-                        <label htmlFor="">Grade: </label>
-                        <select name="grade" value={schoolLevel} onChange={setSchoolLevel}>
+                    <div className="inputDiv">
+                        <Select required labelId="School Level" autoWidth="true" name="schoolLevel" value={schoolLevel} variant="standard" onChange={setSchoolLevel}>
+                            <option>Select Grade Level</option>
                             <option value="middle school" >Middle School</option>
                             <option value="high school">High School</option>
                             <option value="college">UnderGrad/College</option>
-                        </select>
-                    </div>         
-                    <button type="submit">Register</button>
+                        </Select>
+                    </div>      
+                    <Button type="submit">Register</Button>
                 </form>
             </div>
         </div>
