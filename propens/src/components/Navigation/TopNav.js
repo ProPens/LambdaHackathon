@@ -10,7 +10,7 @@ const TopNav =  () =>{
     
     const logOutHandler = () =>{
       localStorage.clear();
-      logOutRedirect.push('/');
+      logOutRedirect.push('/login');
     }
 
     return(
@@ -20,7 +20,7 @@ const TopNav =  () =>{
         <NavLink to="/" className={classes.topNavigationLink}>Dashboard</NavLink>
         {userData  ?  '' : <NavLink to="/register" className={classes.topNavigationLink}>Register</NavLink>}
         {userData ? 
-          <NavLink to="/" className={classes.topNavigationLink} onClick={logOutHandler}>Log Out</NavLink> : 
+          <NavLink to="/login" className={classes.topNavigationLink} onClick={logOutHandler}>Log Out</NavLink> : 
           <NavLink to="/login" className={classes.topNavigationLink}>Login</NavLink>
         }
       </div>

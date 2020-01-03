@@ -1,6 +1,7 @@
 import React from 'react';
 import {useFormInput} from '../../hooks/FormInput';
-import {Button, TextField, Select} from '@material-ui/core';
+import {FormContainer} from '../../StyledComponents/StyledFormComponents';
+import {Container, Button, TextField, Select} from '@material-ui/core';
 import {formStyles} from '../../StyledComponents/MaterialUIGlobalStyles';
 import axios from 'axios';
 
@@ -43,7 +44,7 @@ const UserRegistration = () => {
     }
     
     return (
-        <div className={styleClass.formContainer}>
+        <FormContainer>
             <div className="form-container">
                 <h1>Create a New Account</h1>
                 <form className={styleClass.registrationForm} onSubmit={handleSubmit}>
@@ -73,7 +74,7 @@ const UserRegistration = () => {
                     <Button type="submit">Register</Button>
                 </form>
             </div>
-        </div>
+        </FormContainer>
     )
 }
 
