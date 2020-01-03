@@ -18,7 +18,7 @@ const TopNav =  () =>{
       <h1>ProPens</h1>
       <div className={classes.topNavigaionLinks}>
         <NavLink to="/" className={classes.topNavigationLink}>Dashboard</NavLink>
-        <NavLink to="/register" className={classes.topNavigationLink}>Register</NavLink>
+        {userData  ?  '' : <NavLink to="/register" className={classes.topNavigationLink}>Register</NavLink>}
         {userData ? 
           <NavLink to="/" className={classes.topNavigationLink} onClick={logOutHandler}>Log Out</NavLink> : 
           <NavLink to="/login" className={classes.topNavigationLink}>Login</NavLink>

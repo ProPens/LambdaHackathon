@@ -5,9 +5,7 @@ export const useFormInput = initialValue => {
     const [value, setValue] = useState(initialValue);
 
     const handleChanges = e => {
-
         setValue(e.target.value);
-        console.log(value);
     }
     return [value, handleChanges];
 }
