@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 
 
 export const useFormInput = initialValue => {
@@ -6,8 +6,8 @@ export const useFormInput = initialValue => {
 
     const handleChanges = e => {
         e.preventDefault();
-        console.log(e.target.value);
+        setValue(e.target.value);
+        console.log(value);
     }
-
     return [value, handleChanges];
 }
