@@ -1,6 +1,7 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {useFormInput} from '../../hooks/FormInput';
-import {FormContainer, FormBox, FormHeading, Form, FormInputDiv, FormInputField, FormSelectField, StyledFormControl, FormSubmitBtn, FormBtnDiv} from '../../StyledComponents/StyledFormComponents';
+import {FormContainer, FormBox, FormHeading, Form, FormInputDiv, FormInputField, FormSelectField, StyledFormControl, FormSubmitBtn, FormBtnDiv, AccountRedirectBox} from '../../StyledComponents/StyledFormComponents';
 import {InputLabel} from '@material-ui/core';
 import axios from 'axios';
 
@@ -75,7 +76,12 @@ const UserRegistration = () => {
                     <FormBtnDiv> 
                         <FormSubmitBtn type="submit" color="primary" variant="contained" size="large" disableElevation>Register</FormSubmitBtn>
                     </FormBtnDiv>  
+                    <AccountRedirectBox>
+                    <p>Already have an account? <Link to='/login'>Sign In</Link> </p>
+                    </AccountRedirectBox>
                 </Form>
+                
+                
             </FormBox>            
         </FormContainer>
     )

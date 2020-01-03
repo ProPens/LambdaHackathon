@@ -1,6 +1,7 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {useFormInput} from '../../hooks/FormInput';
-import {FormContainer, FormBox, FormHeading, Form, FormInputDiv, FormInputField, FormSubmitBtn, FormBtnDiv} from '../../StyledComponents/StyledFormComponents';
+import {FormContainer, FormBox, FormHeading, Form, FormInputDiv, FormInputField, FormSubmitBtn, FormBtnDiv, AccountRedirectBox} from '../../StyledComponents/StyledFormComponents';
 import { useHistory } from "react-router-dom";
 import axios from 'axios';
 
@@ -32,7 +33,7 @@ const UserLoginForm = () => {
     
     return(
         <FormContainer>
-        <FormHeading>Log In</FormHeading> 
+        <FormHeading>Sign-In</FormHeading> 
         <FormBox>
             <Form onSubmit={handleSubmit}>
         
@@ -43,9 +44,13 @@ const UserLoginForm = () => {
                     <FormInputField type="password" name="password" value={password} autoComplete="current-password" label="Password" variant="standard" required onChange={setPassword} />
                 </FormInputDiv>      
                 <FormBtnDiv> 
-                    <FormSubmitBtn type="submit" color="primary" variant="contained" size="large" disableElevation>Log In</FormSubmitBtn>
+                    <FormSubmitBtn type="submit" color="primary" variant="contained" size="large" disableElevation>Sign In</FormSubmitBtn>
                 </FormBtnDiv>
+                <AccountRedirectBox>
+                    <p>Don't have an account? <Link to='/register'>Register Here!</Link> </p>
+                </AccountRedirectBox>
             </Form>
+    
         </FormBox>            
     </FormContainer>
     )

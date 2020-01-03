@@ -20,13 +20,14 @@ export const FormBox = styled(Box)({
     width: '80%',
     height: '449px',
     margin: '20px auto',
+    flexWrap: 'wrap',
     justifyContent: 'center'
 });
 
 export const Form = styled('form')({
     width: '80%', 
     margin: 0,
-    padding: '0px 20px'
+    padding: '0px 20px',
 });
 
 export const FormInputDiv = styled('div')({
@@ -63,4 +64,11 @@ export const FormBtnDiv  =  styled('div')({
     padding: '20px 0',
     display: 'flex',
     justifyContent: 'flex-end'
+});
+
+export const AccountRedirectBox = styled(Box)({
+    width: '100%',
+    padding: '10px 0',
+    display: 'flex',
+    justifyContent: 'center'
 });
