@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import axios from 'axios';
 
 const StyledForm = styled.form`
- width: 50%;
+ width: 90%;
 //  height: 40.5vh;
 //  margin: auto 100px;
  padding: 32px;

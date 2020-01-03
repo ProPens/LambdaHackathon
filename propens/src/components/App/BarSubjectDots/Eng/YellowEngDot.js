@@ -26,7 +26,7 @@ class YellowEngDot extends React.Component {
     }
 
     openNav() {
-        const style = { width : 350 };
+        const style = { width : 500 };
         this.setState({ style });
         document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
     }

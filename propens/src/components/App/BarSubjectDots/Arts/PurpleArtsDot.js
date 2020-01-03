@@ -25,11 +25,11 @@ class PurpleArtsDot extends React.Component {
         document.removeEventListener("click", this.closeNav);
     }
     openNav() {
-        const style = { width : 350 };
+        const style = { width : 500 };
         this.setState({ style });
         document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
     }
-    
+
     closeNav() {
         document.removeEventListener("click", this.closeNav);
         const style = { width : 0 };

@@ -34,7 +34,7 @@ class OrngSocDot extends React.Component {
     }
 
     openNav() {
-        const style = { width : 450 };
+        const style = { width : 500 };
         this.setState({ style });
         document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
     }
