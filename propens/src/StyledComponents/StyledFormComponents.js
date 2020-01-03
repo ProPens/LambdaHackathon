@@ -26,3 +26,7 @@ export const Form = styled('form')({
     width: '80%', 
     border: '1px solid green'
 })
+
+export const FormInputDiv = styled('div')({
+    width: '100%'
+})
