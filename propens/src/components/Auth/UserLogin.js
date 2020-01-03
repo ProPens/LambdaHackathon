@@ -32,7 +32,6 @@ const UserLoginForm = () => {
             password: password
         }
         getUser(data);
-        
     }
     
     return(

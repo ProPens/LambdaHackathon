@@ -3,8 +3,8 @@ import {Route, Switch} from 'react-router-dom';
 import TopNav from './components/Navigation/TopNav';
 import BottomNav from './components/Navigation/BottomNav';
 import Dashboard from './components/Dashboard/DashBoard';
-import UserRegistration from './components/Forms/UserRegistration';
-import UserLoginForm from './components/Forms/UserLogin';
+import UserRegistration from './components/Auth/UserRegistration';
+import UserLoginForm from './components/Auth/UserLogin';
 
 const App = () => {
     return (
@@ -17,7 +17,7 @@ const App = () => {
             <Route path='/register'>
                 <UserRegistration />
             </Route>
-            <Route>
+            <Route path='/login'>
                 <UserLoginForm />
             </Route>
         </Switch>
