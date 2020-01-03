@@ -1,6 +1,6 @@
 import React from 'react';
 import {useFormInput} from '../../hooks/FormInput';
-import {FormContainer, FormBox, FormHeading, Form, FormInputDiv, FormInputField, FormSelectField, StyledFormControl, FormSubmitBtn, FormBtnDiv} from '../../StyledComponents/StyledFormComponents';
+import {FormContainer, FormBox, FormHeading, Form, FormInputDiv, FormInputField, FormSubmitBtn, FormBtnDiv} from '../../StyledComponents/StyledFormComponents';
 import { useHistory } from "react-router-dom";
 import axios from 'axios';
 

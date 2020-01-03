@@ -1,7 +1,7 @@
 import React from 'react';
 import {useFormInput} from '../../hooks/FormInput';
 import {FormContainer, FormBox, FormHeading, Form, FormInputDiv, FormInputField, FormSelectField, StyledFormControl, FormSubmitBtn, FormBtnDiv} from '../../StyledComponents/StyledFormComponents';
-import {Button, InputLabel} from '@material-ui/core';
+import {InputLabel} from '@material-ui/core';
 import axios from 'axios';
 
 const UserRegistration = () => {
