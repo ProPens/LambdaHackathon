@@ -5,19 +5,13 @@ import {useStyles} from '../../StyledComponents/MaterialUIGlobalStyles';
 const TopNav =  () =>{
     const classes = useStyles();
     return(
-        <div className={classes.topNavigation}>
+     <div className={classes.topNavigation}>
       <h1>ProPens</h1>
-      <ul>
-        <li>
-          <Link to="/">Dashboard</Link>
-        </li>
-        <li>
-          <Link to="/register">Register</Link>
-        </li>
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
-      </ul>
+      <div className={classes.topNavigaionLinks}>
+        <Link to="/" className={classes.topNavigationLink}>Dashboard</Link>
+        <Link to="/register" className={classes.topNavigationLink}>Register</Link>
+        <Link to="/login" className={classes.topNavigationLink}>Login</Link>
+      </div>
     </div>
     )
 }
