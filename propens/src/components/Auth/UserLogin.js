@@ -1,5 +1,6 @@
 import React from 'react';
 import {useFormInput} from '../../hooks/FormInput';
+import {FormContainer} from '../../StyledComponents/StyledFormComponents';
 import {TextField} from '@material-ui/core';
 import {SubmitBtn} from '../../StyledComponents/MaterialUIGlobalStyles';
 import { useHistory } from "react-router-dom";
@@ -32,7 +33,7 @@ const UserLoginForm = () => {
     }
     
     return(
-        <div>
+        <FormContainer>
             <form onSubmit={handleSubmit} >
             <TextField type="text" label="Username" value={username} onChange={setUsername}/>
             <TextField type="password" label="password" value={password} onChange={setPassword}/>
@@ -40,7 +41,7 @@ const UserLoginForm = () => {
                 <SubmitBtn type="submit">Login</SubmitBtn>  
             </div>
             </form>
-        </div>
+        </FormContainer>
     )
 }
 
