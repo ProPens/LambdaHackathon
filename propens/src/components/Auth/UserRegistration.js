@@ -1,12 +1,11 @@
 import React from 'react';
 import {useFormInput} from '../../hooks/FormInput';
-import {FormContainer, FormBox, FormHeading, Form} from '../../StyledComponents/StyledFormComponents';
-import {Button, TextField, Select} from '@material-ui/core';
-import {formStyles} from '../../StyledComponents/MaterialUIGlobalStyles';
+import {FormContainer, FormBox, FormHeading, Form, FormInputDiv, FormInputField, FormSelectField, StyledFormControl, FormSubmitBtn, FormBtnDiv} from '../../StyledComponents/StyledFormComponents';
+import {Button, InputLabel} from '@material-ui/core';
 import axios from 'axios';
 
 const UserRegistration = () => {
-    const styleClass = formStyles();
+  
     const [firstName, setFirstName] = useFormInput('');
     const [lastName, setLastName] = useFormInput('');
     const [userName, setUserName] = useFormInput('');
@@ -48,34 +47,36 @@ const UserRegistration = () => {
             <FormHeading>Create a New Account</FormHeading> 
             <FormBox>
                 <Form onSubmit={handleSubmit}>
-                    <div className="inputDiv">
-                        <TextField type="text" name="firstName" value={firstName} label="First Name" variant="standard" required onChange={setFirstName} />
-                    </div>
-                    <div className="inputDiv">
-                        <TextField type="text" name="lastName" value={lastName} label="Last Name" onChange={setLastName}/>
-                    </div>
-                    <div className="inputDiv">
-                        <TextField type="text" name="userName" value={userName}  label="Username" variant="standard" required onChange={setUserName}/>
-                    </div>
-                    <div className="inputDiv">
-                        <TextField type="email" name="email" value={email}  label="Email" variant="standard" required onChange={setEmail} />
-                    </div>
-                    <div className="inputDiv">
-                        <TextField type="password" name="password" value={password} autoComplete="current-password" label="Password" variant="standard" required onChange={setPassword} />
-                    </div>
-                    <div className="inputDiv">
-                        <Select required labelId="School Level" name="schoolLevel" value={schoolLevel} variant="standard" onChange={setSchoolLevel}>
-                            <option>Select Grade Level</option>
-                            <option value="middle school" >Middle School</option>
-                            <option value="high school">High School</option>
-                            <option value="college">UnderGrad/College</option>
-                        </Select>
-                    </div>      
-                    <Button type="submit">Register</Button>
+                    <FormInputDiv>
+                        <FormInputField type="text" name="firstName" value={firstName} label="First Name" variant="standard" required onChange={setFirstName} />
+                    </FormInputDiv>
+                    <FormInputDiv>
+                        <FormInputField type="text" name="lastName" value={lastName} label="Last Name" onChange={setLastName}/>
+                    </FormInputDiv>
+                    <FormInputDiv>
+                        <FormInputField type="text" name="userName" value={userName}  label="Username" variant="standard" required onChange={setUserName}/>
+                    </FormInputDiv>
+                    <FormInputDiv>
+                        <FormInputField type="email" name="email" value={email}  label="Email" variant="standard" required onChange={setEmail} />
+                    </FormInputDiv>
+                    <FormInputDiv>
+                        <FormInputField type="password" name="password" value={password} autoComplete="current-password" label="Password" variant="standard" required onChange={setPassword} />
+                    </FormInputDiv>
+                    <FormInputDiv>
+                        <StyledFormControl>
+                            <InputLabel required>Select Grade Level</InputLabel>
+                            <FormSelectField required labelId="School Level" name="schoolLevel" value={schoolLevel} variant="standard" onChange={setSchoolLevel}>
+                                <option value="middle school" >Middle School</option>
+                                <option value="high school">High School</option>
+                                <option value="college">UnderGrad/College</option>
+                            </FormSelectField>
+                        </StyledFormControl>
+                    </FormInputDiv>   
+                    <FormBtnDiv> 
+                        <FormSubmitBtn type="submit" color="primary" variant="contained" size="large" disableElevation>Register</FormSubmitBtn>
+                    </FormBtnDiv>  
                 </Form>
-                    
-            </FormBox>
-                
+            </FormBox>            
         </FormContainer>
     )
 }

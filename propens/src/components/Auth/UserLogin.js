@@ -1,8 +1,6 @@
 import React from 'react';
 import {useFormInput} from '../../hooks/FormInput';
-import {FormContainer} from '../../StyledComponents/StyledFormComponents';
-import {TextField} from '@material-ui/core';
-import {SubmitBtn} from '../../StyledComponents/MaterialUIGlobalStyles';
+import {FormContainer, FormBox, FormHeading, Form, FormInputDiv, FormInputField, FormSelectField, StyledFormControl, FormSubmitBtn, FormBtnDiv} from '../../StyledComponents/StyledFormComponents';
 import { useHistory } from "react-router-dom";
 import axios from 'axios';
 
@@ -34,14 +32,22 @@ const UserLoginForm = () => {
     
     return(
         <FormContainer>
-            <form onSubmit={handleSubmit} >
-            <TextField type="text" label="Username" value={username} onChange={setUsername}/>
-            <TextField type="password" label="password" value={password} onChange={setPassword}/>
-            <div className="submit-btn">     
-                <SubmitBtn type="submit">Login</SubmitBtn>  
-            </div>
-            </form>
-        </FormContainer>
+        <FormHeading>Log In</FormHeading> 
+        <FormBox>
+            <Form onSubmit={handleSubmit}>
+        
+                <FormInputDiv className="inputDiv">
+                    <FormInputField type="text" name="username" value={username}  label="Username" variant="standard" required onChange={setUsername}/>
+                </FormInputDiv>
+                <FormInputDiv className="inputDiv">
+                    <FormInputField type="password" name="password" value={password} autoComplete="current-password" label="Password" variant="standard" required onChange={setPassword} />
+                </FormInputDiv>      
+                <FormBtnDiv> 
+                    <FormSubmitBtn type="submit" color="primary" variant="contained" size="large" disableElevation>Log In</FormSubmitBtn>
+                </FormBtnDiv>
+            </Form>
+        </FormBox>            
+    </FormContainer>
     )
 }
 
