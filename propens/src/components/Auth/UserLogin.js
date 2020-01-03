@@ -13,13 +13,10 @@ const UserLoginForm = () => {
     const getUser = (data) =>{
         axios.post('https://pro-pens.herokuapp.com/api/auth/login', data)
         .then(res => {
-            console.log(res);
             localStorage.setItem('userdata', JSON.stringify({
                 username: res.data.username,
-                token: res.data.token,
-                loggedIn: true
+                token: res.data.token
             }));
-          
             dashboard.push('/');
         })
         .catch(err => console.log(err));
