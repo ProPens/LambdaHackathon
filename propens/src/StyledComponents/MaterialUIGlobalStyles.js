@@ -1,6 +1,4 @@
-import {makeStyles, styled} from '@material-ui/core/styles';
-import {Button} from '@material-ui/core';
-
+import {makeStyles} from '@material-ui/core/styles';
 
 export const useStyles = makeStyles({
     
@@ -40,39 +38,4 @@ export const useStyles = makeStyles({
         color: 'white',
         textDecoration: 'none'
     }
-});
-
-export const formStyles = makeStyles({
-    formContainer: {
-        width: '60%',
-        margin: '0 auto',
-        padding: '30px',
-        border: '1px solid blue',
-        display: 'flex',
-        flexDirection: 'row wrap',
-        justifyContent: 'center',
-        },
-    registrationForm: {
-        width: '100%',
-        margin: '20px 0',
-    },
-    formLabel: {
-        color: 'red',
-    },
-    registrationFormInput: {
-        padding: '10px 0',
-    },
-    inputDiv:{
-        margin: '30px 0',
-        padding: '20px 0',
-        border: '1px solid blue',
-        '& input': {
-            padding: '5px 0',
-        }
-    }, 
-})
-
-export const SubmitBtn = styled(Button)({
-    color: 'green',
-    backgroundColor: 'blue'
 });

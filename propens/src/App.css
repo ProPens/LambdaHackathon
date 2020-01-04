@@ -20,7 +20,7 @@
 
 .bottombar {
   display: flex;
-  margin: 0 auto;
+  margin: 83px auto;
   padding-top: 10px;
   width: 100%;
   background-color: black;
@@ -29,6 +29,7 @@
   justify-content: center;
   position: fixed;
 }
+
 */ .bottomright {
   margin: 0 auto;
   margin-right: 0;

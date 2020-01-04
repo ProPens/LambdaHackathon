@@ -1,8 +1,7 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {useFormInput} from '../../hooks/FormInput';
-import {FormContainer} from '../../StyledComponents/StyledFormComponents';
-import {TextField} from '@material-ui/core';
-import {SubmitBtn} from '../../StyledComponents/MaterialUIGlobalStyles';
+import {FormContainer, FormBox, FormHeading, Form, FormInputDiv, FormInputField, FormSubmitBtn, FormBtnDiv, AccountRedirectBox} from '../../StyledComponents/StyledFormComponents';
 import { useHistory } from "react-router-dom";
 import axios from 'axios';
 
@@ -34,14 +33,26 @@ const UserLoginForm = () => {
     
     return(
         <FormContainer>
-            <form onSubmit={handleSubmit} >
-            <TextField type="text" label="Username" value={username} onChange={setUsername}/>
-            <TextField type="password" label="password" value={password} onChange={setPassword}/>
-            <div className="submit-btn">     
-                <SubmitBtn type="submit">Login</SubmitBtn>  
-            </div>
-            </form>
-        </FormContainer>
+        <FormHeading>Sign-In</FormHeading> 
+        <FormBox>
+            <Form onSubmit={handleSubmit}>
+        
+                <FormInputDiv className="inputDiv">
+                    <FormInputField type="text" name="username" value={username}  label="Username" variant="standard" required onChange={setUsername}/>
+                </FormInputDiv>
+                <FormInputDiv className="inputDiv">
+                    <FormInputField type="password" name="password" value={password} autoComplete="current-password" label="Password" variant="standard" required onChange={setPassword} />
+                </FormInputDiv>      
+                <FormBtnDiv> 
+                    <FormSubmitBtn type="submit" color="primary" variant="contained" size="large" disableElevation>Sign In</FormSubmitBtn>
+                </FormBtnDiv>
+                <AccountRedirectBox>
+                    <p>Don't have an account? <Link to='/register'>Register Here!</Link> </p>
+                </AccountRedirectBox>
+            </Form>
+    
+        </FormBox>            
+    </FormContainer>
     )
 }
 
